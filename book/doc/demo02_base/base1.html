@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>base1 - Book</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../doc/demo01_hello/download.html">Download</a></li><li class="chapter-item expanded affix "><li class="part-title">第一个程序 &gt; demo01_hello</li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/1.hello.html"><strong aria-hidden="true">1.</strong> hello</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/2.editor.html"><strong aria-hidden="true">2.</strong> editor</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/3.node.html"><strong aria-hidden="true">3.</strong> node</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/4.sprite.html"><strong aria-hidden="true">4.</strong> sprite</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/5.node2d.html"><strong aria-hidden="true">5.</strong> node2d</a></li><li class="chapter-item expanded affix "><li class="part-title">基础知识 &gt; demo02_base</li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base1.html" class="active"><strong aria-hidden="true">6.</strong> base1</a></li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base2.html"><strong aria-hidden="true">7.</strong> base2</a></li><li class="chapter-item expanded affix "><li class="part-title">生命周期 &gt; demo03_lifecycle</li><li class="chapter-item expanded "><a href="../../doc/demo03_lifecycle/lifecycle.html"><strong aria-hidden="true">8.</strong> lifecycle</a></li><li class="chapter-item expanded affix "><li class="part-title">信号 &gt; demo04_signal</li><li class="chapter-item expanded "><a href="../../doc/demo04_signal/signal.html"><strong aria-hidden="true">9.</strong> signal</a></li><li class="chapter-item expanded affix "><li class="part-title">场景和节点 &gt; demo05_scene_node</li><li class="chapter-item expanded "><a href="../../doc/demo05_scene_node/scene_node.html"><strong aria-hidden="true">10.</strong> scene_node</a></li><li class="chapter-item expanded affix "><li class="part-title">移动对象 &gt; demo06_move</li><li class="chapter-item expanded "><a href="../../doc/demo06_move/move.html"><strong aria-hidden="true">11.</strong> move</a></li><li class="chapter-item expanded affix "><li class="part-title">碰撞 &gt; demo07_collision</li><li class="chapter-item expanded "><a href="../../doc/demo07_collision/collision.html"><strong aria-hidden="true">12.</strong> collision</a></li><li class="chapter-item expanded affix "><li class="part-title">组件 &gt; demo08_path</li><li class="chapter-item expanded "><a href="../../doc/demo08_path/path.html"><strong aria-hidden="true">13.</strong> path</a></li><li class="chapter-item expanded affix "><li class="part-title">画布屏幕 &gt; demo09_canvas</li><li class="chapter-item expanded "><a href="../../doc/demo09_canvas/canvas.html"><strong aria-hidden="true">14.</strong> canvas</a></li><li class="chapter-item expanded affix "><li class="part-title">动画 &gt; demo10_animation</li><li class="chapter-item expanded "><a href="../../doc/demo10_animation/animation.html"><strong aria-hidden="true">15.</strong> animation</a></li><li class="chapter-item expanded affix "><li class="part-title">粒子光 &gt; demo11_particle_light</li><li class="chapter-item expanded "><a href="../../doc/demo11_particle_light/particle.html"><strong aria-hidden="true">16.</strong> particle</a></li><li class="chapter-item expanded affix "><li class="part-title">图形用户界面 &gt; demo12_gui</li><li class="chapter-item expanded "><a href="../../doc/demo12_gui/gui.html"><strong aria-hidden="true">17.</strong> gui</a></li><li class="chapter-item expanded affix "><li class="part-title">摄像机视角 &gt; demo13_camera</li><li class="chapter-item expanded "><a href="../../doc/demo13_camera/camera.html"><strong aria-hidden="true">18.</strong> camera</a></li><li class="chapter-item expanded affix "><li class="part-title">文件操作 &gt; demo14_file</li><li class="chapter-item expanded "><a href="../../doc/demo14_file/file.html"><strong aria-hidden="true">19.</strong> file</a></li><li class="chapter-item expanded affix "><li class="part-title">音频 &gt; demo15_audio</li><li class="chapter-item expanded "><a href="../../doc/demo15_audio/audio.html"><strong aria-hidden="true">20.</strong> audio</a></li><li class="chapter-item expanded affix "><li class="part-title">http协议 demo16_http</li><li class="chapter-item expanded "><a href="../../doc/demo16_http/http.html"><strong aria-hidden="true">21.</strong> http</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../doc/design-pattern.html">设计模式</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="1-脚本的定义"><a class="header" href="#1-脚本的定义">1. 脚本的定义</a></h1>
+<ul>
+<li>游戏脚本 Script ，用代码来控制游戏对象</li>
+<li>godot使用 GdScript 作为脚本语言</li>
+<li>注意：自本章开始，每节课的项目源码都放在了github项目godot-start，可以直接对照示例项目</li>
+<li>游戏开发，也是一种程序设计，如果是0基础的同学，建议先学习一个强类型语言比如Java，C#，C++，再来学习GdScript就一通百通了</li>
+</ul>
+<h1 id="2-脚本的使用"><a class="header" href="#2-脚本的使用">2. 脚本的使用</a></h1>
+<ul>
+<li>如何使用一个脚本？</li>
+</ul>
+<pre><code>新建脚本 hello.gd ，编辑代码 ，保存一下
+把脚本挂载到游戏节点上
+运行游戏，点 Play Scene 运行当前游戏场景，在 Output 窗口里观察打印输出
+</code></pre>
+<h1 id="3-认识脚本"><a class="header" href="#3-认识脚本">3. 认识脚本</a></h1>
+<ul>
+<li>因为是GdScript是弱类型语言，所以比较自由，但是我们可以约定一些原则让代码更加的规范：</li>
+</ul>
+<pre><code>类名必须与文件名相同，且为小写
+尽量继承于 Node2D 节点，Node2D 节点中的Transform是我们用的最多的节点
+</code></pre>
+<ul>
+<li>常用函数内部执行顺序，_init  _ready  _process</li>
+</ul>
+<pre><code>默认定义了一些事件函数，例如，
+  _init()  脚本初始化的时候调用，对象的构造器，类似于Java的构造函数construct
+  _ready()  开始调用一次，可用于初始化脚本
+  _process(delta) 每帧调用，帧间隔不等，可用于更新游戏
+</code></pre>
+<h1 id="4变量和数据类型"><a class="header" href="#4变量和数据类型">4.变量和数据类型</a></h1>
+<ul>
+<li>变量是用于存储信息的&quot;容器&quot;。</li>
+</ul>
+<pre><code>var x=5;
+var y=6;
+var z=x+y;
+
+就像代数那样
+x=5
+y=6
+z=x+y
+
+在代数中，我们使用字母（比如 x）来保存值（比如 5）。
+通过上面的表达式 z=x+y，我们能够计算出 z 的值为 11。
+在 godot 中，这些字母被称为变量。
+</code></pre>
+<ul>
+<li>gds数据类型分类
+<ul>
+<li>bool，一个字节，默认为false</li>
+<li>int(同C++和Java long)，8个字节，默认为0</li>
+<li>float(同C++和Java double)，8个字节，默认为0</li>
+<li>String，默认为null，字符串可以存储一系列字符，如 &quot;John Doe&quot;。</li>
+<li>数组</li>
+<li>对象</li>
+<li>null，变量没有被赋值，则默认为null</li>
+</ul>
+</li>
+</ul>
+<p><img src="image/integer.JPG" alt="Image text" />
+<img src="image/integer_overflow.JPG" alt="Image text" />
+<img src="image/step.JPG" alt="Image text" /></p>
+<h1 id="5导出变量"><a class="header" href="#5导出变量">5.导出变量</a></h1>
+<ul>
+<li>export关键字可以让变量在编辑器中编辑</li>
+</ul>
+<pre><code># 导出一个数字
+export var a = 1
+# 导出一个节点路径
+export var b:NodePath
+# 导出一个节点路径，不同的写法
+export(NodePath) var c
+# 导出一个文件路径
+export(String, FILE) var e 
+# 导出一个文件路径，以txt结尾
+export(String, FILE, &quot;*.txt&quot;) var d
+# 导出一个资源文件路径
+export(Resource) var f
+# 导出一个颜色
+export(Color, RGB) var g
+</code></pre>
+<h1 id="6函数"><a class="header" href="#6函数">6.函数</a></h1>
+<ul>
+<li>函数是可以简单的理解为当它被调用时执行的可重复使用的代码块。</li>
+<li>函数就是包裹在花括号中的代码块，前面使用了关键词 func，当调用该函数时，会执行函数内的代码。</li>
+<li>空函数需要使用pass关键字</li>
+</ul>
+<pre><code>func sayHello():
+    # 执行代码
+</code></pre>
+<ul>
+<li>调用带参数的函数，在调用函数时，您可以向其传递值，这些值被称为参数。</li>
+</ul>
+<pre><code>func sayHello(param1， param2):
+    # 执行代码
+</code></pre>
+<ul>
+<li>带有返回值的函数，有时，我们会希望函数将值返回调用它的地方，通过使用 return 语句就可以实现。</li>
+<li>return方法可以指定返回的类型</li>
+</ul>
+<pre><code>func sayHello(param1， param2):
+    # 执行代码
+    return x
+</code></pre>
+<h1 id="7变量的作用域"><a class="header" href="#7变量的作用域">7.变量的作用域</a></h1>
+<ul>
+<li>局部作用域，变量在函数内声明，变量为局部作用域，只能在函数内部访问</li>
+</ul>
+<pre><code># 此处不能调用 carName 变量
+func myFunction():
+    var carName = &quot;Volvo&quot;;
+    # 函数内可调用 carName 变量
+</code></pre>
+<ul>
+<li>全局变量，变量在函数外定义，即为全局变量，整个脚本文件中都可以使用</li>
+</ul>
+<pre><code>var carName = &quot; Volvo&quot;;
+ 
+# 此处可调用 carName 变量
+func myFunction():
+    # 函数内可调用 carName 变量
+</code></pre>
+<h1 id="8-运算符"><a class="header" href="#8-运算符">8. 运算符</a></h1>
+<ul>
+<li>算术运算符</li>
+</ul>
+<pre><code>+	加法	        x=y+2	7	5
+-	减法	        x=y-2	3	5
+*	乘法	        x=y*2	10	5
+/	除法	        x=y/2	2.5	5
+%	取模（余数）	x=y%2	1	5
+</code></pre>
+<ul>
+<li>赋值运算符，赋值运算符用于给 GdScript 变量赋值</li>
+</ul>
+<pre><code>=	x=y	 	x=5
++=	x+=y	x=x+y	x=15
+-=	x-=y	x=x-y	x=5
+*=	x*=y	x=x*y	x=50
+/=	x/=y	x=x/y	x=2
+%=	x%=y	x=x%y	x=0
+</code></pre>
+<ul>
+<li>比较运算符，比较运算符在逻辑语句中使用，以测定变量或值是否相等</li>
+</ul>
+<pre><code>==	等于	x==8	false
+!=	 不等于	x!=8	true
+&gt;	 大于	x&gt;8	false
+&lt;	 小于	x&lt;8	true
+&gt;=	 大于或等于	x&gt;=8	false
+&lt;=	 小于或等于	x&lt;=8	true
+</code></pre>
+<ul>
+<li>逻辑运算符，逻辑运算符用于测定变量或值之间的逻辑。</li>
+</ul>
+<pre><code>&amp;&amp;	and	(x &lt; 10 &amp;&amp; y &gt; 1) 为 true
+||	or	(x==5 || y==5) 为 false
+!	not	!(x==y) 为 true
+</code></pre>
+<h1 id="9-条件语句"><a class="header" href="#9-条件语句">9. 条件语句</a></h1>
+<ul>
+<li>
+<p>通常在写代码时，您总是需要为不同的决定来执行不同的动作。您可以在代码中使用条件语句来完成该任务。</p>
+</li>
+<li>
+<p>if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码</p>
+</li>
+</ul>
+<pre><code>if (condition):
+    当条件为 true 时执行的代码
+</code></pre>
+<ul>
+<li>if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码</li>
+</ul>
+<pre><code>if (condition):
+    当条件为 true 时执行的代码
+else:
+    当条件不为 true 时执行的代码
+</code></pre>
+<ul>
+<li>if...else if....else 语句- 使用该语句来选择多个代码块之一来执行</li>
+</ul>
+<pre><code>if (condition1):
+    当条件 1 为 true 时执行的代码
+else if (condition2):
+    当条件 2 为 true 时执行的代码
+else:
+  当条件 1 和 条件 2 都不为 true 时执行的代码
+</code></pre>
+<ul>
+<li>match(switch) 语句 - 使用该语句来选择多个代码块之一来执行</li>
+</ul>
+<h1 id="10-循环语句"><a class="header" href="#10-循环语句">10. 循环语句</a></h1>
+<ul>
+<li>循环可以将代码块执行指定的次数，如果您希望一遍又一遍地运行相同的代码，并且每次的值都不同，那么使用循环是很方便的</li>
+<li>for</li>
+<li>while</li>
+<li>break 语句跳出循环后，会继续执行该循环之后的代码（如果有的话）</li>
+<li>continue 语句中断循环中的迭代，如果出现了指定的条件，然后继续循环中的下一个迭代</li>
+</ul>
+<h1 id="11-数组和字典的遍历"><a class="header" href="#11-数组和字典的遍历">11. 数组和字典的遍历</a></h1>
+<ul>
+<li>数组遍历</li>
+</ul>
+<pre><code>func arrayIterator():
+	# range等价于for(int i = 0; i &lt; 20; i++)
+	print(&quot;数组遍历方法1：&quot;)
+	for i in range(3):
+		print(i)
+	print(&quot;数组遍历方法2：&quot;)
+	for ele in arr:
+		print(ele)
+	print(&quot;数组遍历方法3：&quot;)
+	for index in range(arr.size()):
+		print(arr[index])
+</code></pre>
+<ul>
+<li>字典遍历</li>
+</ul>
+<pre><code>func dictionaryIterator():
+	print(&quot;字典遍历方法1：&quot;)
+	for key in dict:
+		print(&quot;key:&quot; + key as String)
+		print(&quot;value:&quot; + dict[key] as String)
+		
+	print(&quot;字典遍历方法2：&quot;)
+	for key in dict.keys():
+		print(&quot;key:&quot; + key as String)
+		print(&quot;value:&quot; + dict[key] as String)
+		
+	print(&quot;字典遍历方法3：&quot;)
+	for value in dict.values():
+		print(&quot;value:&quot; + value as String)	
+</code></pre>
+<h1 id="12-静态变量和静态方法"><a class="header" href="#12-静态变量和静态方法">12. 静态变量和静态方法</a></h1>
+<ul>
+<li>const变量（静态变量）</li>
+</ul>
+<pre><code>const ANSWER = 42
+</code></pre>
+<ul>
+<li>静态方法</li>
+</ul>
+<pre><code>static func getAnswer():
+	return ANSWER
+</code></pre>
+<h1 id="13-对象"><a class="header" href="#13-对象">13. 对象</a></h1>
+<ul>
+<li>真实生活中的对象，属性和方法</li>
+<li>真实生活中，一辆汽车是一个对象。对象有它的属性，如重量和颜色等，方法有启动停止等</li>
+</ul>
+<pre><code># Inner class，默认继承Object
+class Animal:
+	extends Object  # 如果不指定继承的类，默认基础Object
+	const STATIC_FIELD = &quot;静态变量&quot;
+	# 属性
+	var height: int
+	
+	func _init():
+		print(&quot;Animal 构造方法&quot;)
+		
+	func move():
+		print(&quot;animal，移动&quot;)
+	
+	static func staticFuction():
+		pass
+</code></pre>
+<h1 id="14-调试"><a class="header" href="#14-调试">14. 调试</a></h1>
+<ul>
+<li>在编写 GdScript 时，如果没有调试工具将是一件很痛苦的事情。</li>
+<li>你的代码可能包含语法错误，逻辑错误，有了调试工具，这些错误比较容易发现。</li>
+</ul>
+<h1 id="15-参考资料"><a class="header" href="#15-参考资料">15. 参考资料</a></h1>
+<ul>
+<li><a href="https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_basics.html">godot官方文档</a></li>
+<li><a href="https://www.youtube.com/watch?v=JJQa3xrRNM0&amp;list=PLJ690cxlZTgL4i3sjTPRQTyrJ5TTkYJ2_">Godot Tutorials的GDScript Fundamentals Tutorial Series，youtube播放量最高的godot教程视频</a></li>
+<li><a href="https://www.youtube.com/watch?v=sChM51ibm5k&amp;list=PLJ690cxlZTgIsmdEhFufnB7O6KWoMS8M6">Godot Tutorials的Godot Basics Tutorial Series，youtube播放量最高的godot教程视频</a></li>
+<li><a href="https://www.bilibili.com/video/BV17g4y1z7uS">B站视频</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../doc/demo01_hello/5.node2d.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../doc/demo02_base/base2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../doc/demo01_hello/5.node2d.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../doc/demo02_base/base2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

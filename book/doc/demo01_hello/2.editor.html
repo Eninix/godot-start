@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>editor - Book</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../doc/demo01_hello/download.html">Download</a></li><li class="chapter-item expanded affix "><li class="part-title">第一个程序 &gt; demo01_hello</li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/1.hello.html"><strong aria-hidden="true">1.</strong> hello</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/2.editor.html" class="active"><strong aria-hidden="true">2.</strong> editor</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/3.node.html"><strong aria-hidden="true">3.</strong> node</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/4.sprite.html"><strong aria-hidden="true">4.</strong> sprite</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/5.node2d.html"><strong aria-hidden="true">5.</strong> node2d</a></li><li class="chapter-item expanded affix "><li class="part-title">基础知识 &gt; demo02_base</li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base1.html"><strong aria-hidden="true">6.</strong> base1</a></li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base2.html"><strong aria-hidden="true">7.</strong> base2</a></li><li class="chapter-item expanded affix "><li class="part-title">生命周期 &gt; demo03_lifecycle</li><li class="chapter-item expanded "><a href="../../doc/demo03_lifecycle/lifecycle.html"><strong aria-hidden="true">8.</strong> lifecycle</a></li><li class="chapter-item expanded affix "><li class="part-title">信号 &gt; demo04_signal</li><li class="chapter-item expanded "><a href="../../doc/demo04_signal/signal.html"><strong aria-hidden="true">9.</strong> signal</a></li><li class="chapter-item expanded affix "><li class="part-title">场景和节点 &gt; demo05_scene_node</li><li class="chapter-item expanded "><a href="../../doc/demo05_scene_node/scene_node.html"><strong aria-hidden="true">10.</strong> scene_node</a></li><li class="chapter-item expanded affix "><li class="part-title">移动对象 &gt; demo06_move</li><li class="chapter-item expanded "><a href="../../doc/demo06_move/move.html"><strong aria-hidden="true">11.</strong> move</a></li><li class="chapter-item expanded affix "><li class="part-title">碰撞 &gt; demo07_collision</li><li class="chapter-item expanded "><a href="../../doc/demo07_collision/collision.html"><strong aria-hidden="true">12.</strong> collision</a></li><li class="chapter-item expanded affix "><li class="part-title">组件 &gt; demo08_path</li><li class="chapter-item expanded "><a href="../../doc/demo08_path/path.html"><strong aria-hidden="true">13.</strong> path</a></li><li class="chapter-item expanded affix "><li class="part-title">画布屏幕 &gt; demo09_canvas</li><li class="chapter-item expanded "><a href="../../doc/demo09_canvas/canvas.html"><strong aria-hidden="true">14.</strong> canvas</a></li><li class="chapter-item expanded affix "><li class="part-title">动画 &gt; demo10_animation</li><li class="chapter-item expanded "><a href="../../doc/demo10_animation/animation.html"><strong aria-hidden="true">15.</strong> animation</a></li><li class="chapter-item expanded affix "><li class="part-title">粒子光 &gt; demo11_particle_light</li><li class="chapter-item expanded "><a href="../../doc/demo11_particle_light/particle.html"><strong aria-hidden="true">16.</strong> particle</a></li><li class="chapter-item expanded affix "><li class="part-title">图形用户界面 &gt; demo12_gui</li><li class="chapter-item expanded "><a href="../../doc/demo12_gui/gui.html"><strong aria-hidden="true">17.</strong> gui</a></li><li class="chapter-item expanded affix "><li class="part-title">摄像机视角 &gt; demo13_camera</li><li class="chapter-item expanded "><a href="../../doc/demo13_camera/camera.html"><strong aria-hidden="true">18.</strong> camera</a></li><li class="chapter-item expanded affix "><li class="part-title">文件操作 &gt; demo14_file</li><li class="chapter-item expanded "><a href="../../doc/demo14_file/file.html"><strong aria-hidden="true">19.</strong> file</a></li><li class="chapter-item expanded affix "><li class="part-title">音频 &gt; demo15_audio</li><li class="chapter-item expanded "><a href="../../doc/demo15_audio/audio.html"><strong aria-hidden="true">20.</strong> audio</a></li><li class="chapter-item expanded affix "><li class="part-title">http协议 demo16_http</li><li class="chapter-item expanded "><a href="../../doc/demo16_http/http.html"><strong aria-hidden="true">21.</strong> http</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../doc/design-pattern.html">设计模式</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="1-godot的界面介绍"><a class="header" href="#1-godot的界面介绍">1. godot的界面介绍</a></h1>
+<p><img src="image/godot-editor.PNG" alt="Image text" /></p>
+<h3 id="侧面分栏dock"><a class="header" href="#侧面分栏dock">侧面分栏（Dock）</a></h3>
+<ul>
+<li>
+<p>点击侧面分栏的右上角可以调整分栏的位置</p>
+</li>
+<li>
+<p>左侧面分栏具体包括：</p>
+<ol>
+<li>文件系统（FileSystem），显示了当前项目中所有的资源文件</li>
+<li>导入（Import），显示了文件系统分栏中所选资源文件的导入设置。</li>
+<li>场景（Scene），按照层级结构显示当前场景中的所有节点，可以简单的理解为一个游戏里的场景/关卡</li>
+</ol>
+</li>
+<li>
+<p>右侧面分栏具体包括：</p>
+<ol>
+<li>属性（Inspector），显示了场景分栏中所选节点的属性。</li>
+<li>节点（Node），显示了与当前场景分栏中所选节点对应的一些“信息”。</li>
+</ol>
+</li>
+</ul>
+<h3 id="中间面板"><a class="header" href="#中间面板">中间面板：</a></h3>
+<ul>
+<li>
+<p>主工作区（Workspace）</p>
+<ul>
+<li>2D，当在场景分栏中所选节点为2D类型时，会自动进入此工作区。</li>
+<li>3D，当在场景分栏中所选节点为3D类型时，会自动进入此工作区。</li>
+<li>脚本（Script），此工作区可以对当前项目中的脚本进行编辑。</li>
+<li>资源库（AssetLib），可以搜索并浏览网站上的资源</li>
+</ul>
+</li>
+<li>
+<p>底部面板（Bottom Panel）</p>
+<ul>
+<li>隐藏</li>
+</ul>
+</li>
+<li>
+<p>与Unity和UE4不同的是：Godot这种布局关系当前是相对固定的，即它不能随意调整任意一个面板的位置或脱离成独立的窗口。虽然这看似是一个缺点，不过从某种程度上讲也让引擎变得更简单了。</p>
+</li>
+<li>
+<p>如果布局乱了，恢复一下就可以了，Editor | Editor Layout | Default</p>
+</li>
+</ul>
+<h1 id="2-场景和资源"><a class="header" href="#2-场景和资源">2. 场景和资源</a></h1>
+<ul>
+<li>场景 Scene ，就是一个游戏里的场景 / 关卡</li>
+<li>创建场景，在res面板的文件夹下右键，New Scene创建场景</li>
+<li>资源 Asset，指游戏里用到的素材、脚本等数据文件</li>
+</ul>
+<pre><code>比如，常用的几种类型:
+Texture 图片素材  ( *.jpg /  *.png)
+Audio音频素材 ( *.mp3)
+程序脚本GdScript ( *.gd)
+</code></pre>
+<ul>
+<li>可以对素材执行删除 Delete 、重命名 Rename 等操作</li>
+</ul>
+<h1 id="3-场景视图和游戏视图"><a class="header" href="#3-场景视图和游戏视图">3. 场景视图和游戏视图</a></h1>
+<ul>
+<li>
+<p>场景视图Scene ，即场景编辑器窗口，默认地，创建了一个场景empty</p>
+</li>
+<li>
+<p>鼠标滚轮 ：放大/缩小视图</p>
+</li>
+<li>
+<p>鼠标右键拖拽：平移视图</p>
+</li>
+<li>
+<p>网格，每一个大网格包括8*8的小网格，每个小网格8个像素</p>
+</li>
+</ul>
+<pre><code>每一个小格子为：8像素 x 8像素
+每一个大格子为：64像素 x 64像素
+</code></pre>
+<ul>
+<li>
+<p>场景视图中的蓝色框区域是可见的范围，对应的就是运行游戏的时候的游戏视图</p>
+</li>
+<li>
+<p>本教程所有的每节课都很简单，这是因为对godot的知识做了拆解，把复杂的知识拆解为一个一个简单的知识点</p>
+</li>
+<li>
+<p>然后把每个简单的知识点单独作为一节课，所以整个课程的难度是一种渐进式的</p>
+</li>
+<li>
+<p>复杂的东西都是由一个一个简单的知识构成的，不要觉得课程简单，如果简单的东西不熟练不练习，后面的课程很可能会更不上</p>
+</li>
+</ul>
+<h1 id="4-游戏对象节点"><a class="header" href="#4-游戏对象节点">4. 游戏对象（节点）</a></h1>
+<ul>
+<li>
+<p>游戏对象 Node，就是场景中包含的内容，godot所有操作都是基于节点Node</p>
+</li>
+<li>
+<p>演示：向Scene窗口里添加几个图片</p>
+</li>
+</ul>
+<pre><code>1 准备图片素材
+2 把图片拖到2D游戏场景中
+3 在Scene窗口中，观察新加的游戏对象
+</code></pre>
+<ul>
+<li>游戏对象的简单操作：</li>
+</ul>
+<pre><code>1 选中游戏对象
+从左侧的层次管理器（Scene窗口）中选中游戏对象
+2 移动游戏对象
+选用移动工具，拖动小方块
+3 修改对象名字
+在Scene窗口中，可以修改名字、删除对象等操作
+</code></pre>
+<h1 id="5-坐标系"><a class="header" href="#5-坐标系">5. 坐标系</a></h1>
+<p><img src="../demo05_scene_node/image/%E5%9D%90%E6%A0%87%E7%B3%BB-godot-1.png" alt="Image text" /></p>
+<ul>
+<li>选择移动工具，移动一个对象</li>
+<li>可以通过鼠标去移动游戏对象，也可以通过键盘方向键移动游戏对象，也可以手动修改position的坐标x和y去更加精确的移动对象</li>
+</ul>
+<pre><code>在 Inspector 属性面板：
+观察对象的坐标 Position: x,  y
+可以发现，对象的坐标会随之变化
+</code></pre>
+<ul>
+<li>世界坐标系，又称为全局坐标系</li>
+</ul>
+<pre><code>y轴向下为正
+x轴向右为正
+
+一个像素在真实世界中，可以自行约定，比如约定1像素=1米
+</code></pre>
+<ul>
+<li>
+<p>相对坐标系，又称为局部坐标系或者本地坐标系，相对于父节点的坐标，godot的坐标都是相对坐标</p>
+</li>
+<li>
+<p>全局坐标和局部坐标可以相互转化</p>
+</li>
+</ul>
+<pre><code>Node2D及其子节点的位置可以使用position和gloabl_position来控制，其中，前者是该节点相对于父节点的相对位置，后者是全局位置。
+简而言之，position的坐标系是以父节点的位置坐标为原点的坐标系，方向，还是水平向右为x轴正方向，竖直向下为y轴正方向。
+需要注意的是，全局位置是以场景的左上角为原点的，并不是以根结点的位置作为原点的
+</code></pre>
+<h1 id="6-节点的基础操作"><a class="header" href="#6-节点的基础操作">6. 节点的基础操作</a></h1>
+<ul>
+<li>Q，选择工具，最强大的工具</li>
+</ul>
+<pre><code>Alt + 拖曳边框缩放点，保持选中目标中心位置不变进行缩放
+Shift + 等比列缩放
+Ctrl + 鼠标拖曳，以pivot为中心旋转当前对象
+</code></pre>
+<ul>
+<li>W，移动工具，改变 Position</li>
+</ul>
+<pre><code>Move Mode 对象的移动：
+单独改变X坐标
+单独改变Y坐标
+拖拽中间的方块，可以任意拖动
+也可以直接在 Inspector 中输入坐标，会更精确一些
+</code></pre>
+<ul>
+<li>R，旋转工具，改变 Rotation</li>
+</ul>
+<pre><code>轴心点，又称中心点，是节点的旋转中心
+
+V，移动轴心点，Shift + V 拖拽轴心点
+
+中心点是一个物体的中心，当我们对物体进行操作的时候，都是以中心点为中心进行对物体的操作
+轴心点可以理解为把物体抽象成一个点，物体的位置就是指其轴心点的位置，就是该物体坐标系的原点
+后面的课程会继续介绍轴心点
+
+Rotate Mode 对象的旋转
+沿轴心点旋转
+</code></pre>
+<ul>
+<li>S，缩放工具，改变 Scale</li>
+</ul>
+<pre><code>Scale Mode 对象的缩放
+沿 X 轴缩放
+沿 Y 轴缩放
+拖拽中间的小方块，X 和 Y 等比例缩放
+</code></pre>
+<ul>
+<li>F，居中选取对象，非常有用的快捷键</li>
+</ul>
+<h1 id="7-节点操作的工具多节点选择轴心点平滑尺子"><a class="header" href="#7-节点操作的工具多节点选择轴心点平滑尺子">7. 节点操作的工具，多节点选择，轴心点，平滑，尺子</a></h1>
+<ul>
+<li>多节点选择工具，show a list，主要用来精确选择层叠在一起的节点</li>
+<li>轴心点工具，移动轴心点，和选择工具中的快捷键V有同样的作用</li>
+<li>平滑工具，固定场景</li>
+<li>尺子工具，量图片或者节点的像素</li>
+</ul>
+<h1 id="8-智能对齐snap和锁定节点"><a class="header" href="#8-智能对齐snap和锁定节点">8. 智能对齐Snap和锁定节点</a></h1>
+<ul>
+<li>智能对齐，Smart Snap</li>
+<li>网格对齐，Grid Snap</li>
+<li>锁定节点，使其不能移动</li>
+<li>子节点不可选中</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../doc/demo01_hello/1.hello.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../doc/demo01_hello/3.node.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../doc/demo01_hello/1.hello.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../doc/demo01_hello/3.node.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

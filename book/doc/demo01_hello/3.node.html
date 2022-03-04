@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>node - Book</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../doc/demo01_hello/download.html">Download</a></li><li class="chapter-item expanded affix "><li class="part-title">第一个程序 &gt; demo01_hello</li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/1.hello.html"><strong aria-hidden="true">1.</strong> hello</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/2.editor.html"><strong aria-hidden="true">2.</strong> editor</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/3.node.html" class="active"><strong aria-hidden="true">3.</strong> node</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/4.sprite.html"><strong aria-hidden="true">4.</strong> sprite</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/5.node2d.html"><strong aria-hidden="true">5.</strong> node2d</a></li><li class="chapter-item expanded affix "><li class="part-title">基础知识 &gt; demo02_base</li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base1.html"><strong aria-hidden="true">6.</strong> base1</a></li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base2.html"><strong aria-hidden="true">7.</strong> base2</a></li><li class="chapter-item expanded affix "><li class="part-title">生命周期 &gt; demo03_lifecycle</li><li class="chapter-item expanded "><a href="../../doc/demo03_lifecycle/lifecycle.html"><strong aria-hidden="true">8.</strong> lifecycle</a></li><li class="chapter-item expanded affix "><li class="part-title">信号 &gt; demo04_signal</li><li class="chapter-item expanded "><a href="../../doc/demo04_signal/signal.html"><strong aria-hidden="true">9.</strong> signal</a></li><li class="chapter-item expanded affix "><li class="part-title">场景和节点 &gt; demo05_scene_node</li><li class="chapter-item expanded "><a href="../../doc/demo05_scene_node/scene_node.html"><strong aria-hidden="true">10.</strong> scene_node</a></li><li class="chapter-item expanded affix "><li class="part-title">移动对象 &gt; demo06_move</li><li class="chapter-item expanded "><a href="../../doc/demo06_move/move.html"><strong aria-hidden="true">11.</strong> move</a></li><li class="chapter-item expanded affix "><li class="part-title">碰撞 &gt; demo07_collision</li><li class="chapter-item expanded "><a href="../../doc/demo07_collision/collision.html"><strong aria-hidden="true">12.</strong> collision</a></li><li class="chapter-item expanded affix "><li class="part-title">组件 &gt; demo08_path</li><li class="chapter-item expanded "><a href="../../doc/demo08_path/path.html"><strong aria-hidden="true">13.</strong> path</a></li><li class="chapter-item expanded affix "><li class="part-title">画布屏幕 &gt; demo09_canvas</li><li class="chapter-item expanded "><a href="../../doc/demo09_canvas/canvas.html"><strong aria-hidden="true">14.</strong> canvas</a></li><li class="chapter-item expanded affix "><li class="part-title">动画 &gt; demo10_animation</li><li class="chapter-item expanded "><a href="../../doc/demo10_animation/animation.html"><strong aria-hidden="true">15.</strong> animation</a></li><li class="chapter-item expanded affix "><li class="part-title">粒子光 &gt; demo11_particle_light</li><li class="chapter-item expanded "><a href="../../doc/demo11_particle_light/particle.html"><strong aria-hidden="true">16.</strong> particle</a></li><li class="chapter-item expanded affix "><li class="part-title">图形用户界面 &gt; demo12_gui</li><li class="chapter-item expanded "><a href="../../doc/demo12_gui/gui.html"><strong aria-hidden="true">17.</strong> gui</a></li><li class="chapter-item expanded affix "><li class="part-title">摄像机视角 &gt; demo13_camera</li><li class="chapter-item expanded "><a href="../../doc/demo13_camera/camera.html"><strong aria-hidden="true">18.</strong> camera</a></li><li class="chapter-item expanded affix "><li class="part-title">文件操作 &gt; demo14_file</li><li class="chapter-item expanded "><a href="../../doc/demo14_file/file.html"><strong aria-hidden="true">19.</strong> file</a></li><li class="chapter-item expanded affix "><li class="part-title">音频 &gt; demo15_audio</li><li class="chapter-item expanded "><a href="../../doc/demo15_audio/audio.html"><strong aria-hidden="true">20.</strong> audio</a></li><li class="chapter-item expanded affix "><li class="part-title">http协议 demo16_http</li><li class="chapter-item expanded "><a href="../../doc/demo16_http/http.html"><strong aria-hidden="true">21.</strong> http</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../doc/design-pattern.html">设计模式</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="1-节点的父子关系"><a class="header" href="#1-节点的父子关系">1. 节点的父子关系</a></h1>
+<ul>
+<li>
+<p>在层级树中，对象 (节点) 呈树形显示，一个节点下面，也可以下挂子节点</p>
+</li>
+<li>
+<p>演示：</p>
+</li>
+</ul>
+<pre><code>1 添加两个对象
+2 拖拽一个对象到另一个对象，成为子对象 (子节点)
+3 移动父对象、旋转父对象，观察
+
+可以发现，当父对象移动时，子对象随之移动
+</code></pre>
+<ul>
+<li>理解相对坐标</li>
+</ul>
+<pre><code>子对象的坐标轴，是相对于父对象的
+1 移动父对象时，子对象的 Position 不发生变化
+2 旋转父对象时，子对象的 Rotation 不发生变化
+</code></pre>
+<h1 id="2-节点的显示和隐藏"><a class="header" href="#2-节点的显示和隐藏">2. 节点的显示和隐藏</a></h1>
+<ul>
+<li>删除游戏对象</li>
+</ul>
+<pre><code>右键 Delete ，或者键盘 Delete 均可
+</code></pre>
+<ul>
+<li>恢复</li>
+</ul>
+<pre><code>CTRL + Z ，撤销上一步操作
+</code></pre>
+<ul>
+<li>更改节点对象名字</li>
+</ul>
+<pre><code>右键 Rename，或者双击节点修改
+</code></pre>
+<ul>
+<li>显示 / 隐藏</li>
+</ul>
+<pre><code>在 Inspector 里，勾选 Visible 复选框，或者在节点右侧点击Toggle Visibility
+</code></pre>
+<ul>
+<li>设置长宽比</li>
+</ul>
+<pre><code>在 Project | Project Settings | Display | Window 中可以设置长宽比
+</code></pre>
+<h1 id="3-游戏节点的显示顺序"><a class="header" href="#3-游戏节点的显示顺序">3. 游戏节点的显示顺序</a></h1>
+<ul>
+<li>在2D画面中，两个对象如果重叠，谁显示在上面呢？</li>
+<li>按照节点的顺序</li>
+<li>在数据结构上的专业术语叫树的深度优先遍历，深度优先遍历的顺序就是最后显示的顺序</li>
+</ul>
+<p><img src="../demo05_scene_node/image/%E8%8A%82%E7%82%B9.png" alt="Image text" />
+<img src="../demo05_scene_node/image/%E8%8A%82%E7%82%B9%E6%B8%B2%E6%9F%93%E9%A1%BA%E5%BA%8F.png" alt="Image text" /></p>
+<h1 id="4-pivot轴心点"><a class="header" href="#4-pivot轴心点">4. pivot，轴心点</a></h1>
+<ul>
+<li>
+<p>轴心点也叫中心点，中心点是一个物体的中心，当我们对物体进行操作的时候，都是以中心点为中心进行对物体的操作</p>
+</li>
+<li>
+<p>轴心点可以理解为把物体抽象成一个点，物体的位置就是指其轴心点的位置，就是该物体坐标系的原点</p>
+</li>
+<li>
+<p><strong>主要用于旋转和决定对象的位置</strong></p>
+</li>
+<li>
+<p>轴心 Pivot ，指旋转轴、坐标基准点，默认在对象的几何中心</p>
+</li>
+<li>
+<p>轴心的作用：</p>
+<ul>
+<li>旋转轴，当旋转对象时，是以 Pivot 为轴心来去旋转对象的</li>
+<li>坐标系的原点，当移动对象时，是以 Pivot 为中心来计算位置Position的</li>
+</ul>
+</li>
+<li>
+<p>添加一个图片，设置其 Pivot 位置，多练习一下，不及小步无以至千里</p>
+</li>
+</ul>
+<h1 id="5-anchor锚点"><a class="header" href="#5-anchor锚点">5. anchor，锚点</a></h1>
+<ul>
+<li>是一个点，锚点描述的是一个对象的Margin，相对于锚点的坐标</li>
+<li>锚点的left，top，right，bottom是相对于父节点的值</li>
+<li>主要是用于描述子节点相对于父节点的位置</li>
+<li>当对一个节点的子节点进行设置锚点时，子节点的锚点范围只能够是父节点的控件区域内。</li>
+<li>注意任何布局也都是相对于父窗口矩形的</li>
+<li><strong>主要用于在GUI中描述子节点相对于父节点的位置</strong></li>
+<li>后面的课程学到GUI中会继续介绍锚点，现在只做了解</li>
+</ul>
+<p><img src="../demo12_gui/image/gui4.png" alt="Image text" />
+<img src="../demo12_gui/image/gui5.png" alt="Image text" />
+<img src="../demo12_gui/image/gui6.png" alt="Image text" />
+<img src="../demo12_gui/image/gui7.png" alt="Image text" />
+<img src="../demo12_gui/image/gui8.png" alt="Image text" />
+<img src="../demo12_gui/image/gui9.png" alt="Image text" />
+<img src="../demo12_gui/image/gui10.png" alt="Image text" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../doc/demo01_hello/2.editor.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../doc/demo01_hello/4.sprite.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../doc/demo01_hello/2.editor.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../doc/demo01_hello/4.sprite.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

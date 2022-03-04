@@ -2,5 +2,5 @@
 authors = []
 language = "en"
 multilingual = true
-src = "src"
+src = "."
 title = "Book"

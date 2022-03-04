@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>lifecycle - Book</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../../doc/demo01_hello/download.html">Download</a></li><li class="chapter-item expanded affix "><li class="part-title">第一个程序 &gt; demo01_hello</li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/1.hello.html"><strong aria-hidden="true">1.</strong> hello</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/2.editor.html"><strong aria-hidden="true">2.</strong> editor</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/3.node.html"><strong aria-hidden="true">3.</strong> node</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/4.sprite.html"><strong aria-hidden="true">4.</strong> sprite</a></li><li class="chapter-item expanded "><a href="../../doc/demo01_hello/5.node2d.html"><strong aria-hidden="true">5.</strong> node2d</a></li><li class="chapter-item expanded affix "><li class="part-title">基础知识 &gt; demo02_base</li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base1.html"><strong aria-hidden="true">6.</strong> base1</a></li><li class="chapter-item expanded "><a href="../../doc/demo02_base/base2.html"><strong aria-hidden="true">7.</strong> base2</a></li><li class="chapter-item expanded affix "><li class="part-title">生命周期 &gt; demo03_lifecycle</li><li class="chapter-item expanded "><a href="../../doc/demo03_lifecycle/lifecycle.html" class="active"><strong aria-hidden="true">8.</strong> lifecycle</a></li><li class="chapter-item expanded affix "><li class="part-title">信号 &gt; demo04_signal</li><li class="chapter-item expanded "><a href="../../doc/demo04_signal/signal.html"><strong aria-hidden="true">9.</strong> signal</a></li><li class="chapter-item expanded affix "><li class="part-title">场景和节点 &gt; demo05_scene_node</li><li class="chapter-item expanded "><a href="../../doc/demo05_scene_node/scene_node.html"><strong aria-hidden="true">10.</strong> scene_node</a></li><li class="chapter-item expanded affix "><li class="part-title">移动对象 &gt; demo06_move</li><li class="chapter-item expanded "><a href="../../doc/demo06_move/move.html"><strong aria-hidden="true">11.</strong> move</a></li><li class="chapter-item expanded affix "><li class="part-title">碰撞 &gt; demo07_collision</li><li class="chapter-item expanded "><a href="../../doc/demo07_collision/collision.html"><strong aria-hidden="true">12.</strong> collision</a></li><li class="chapter-item expanded affix "><li class="part-title">组件 &gt; demo08_path</li><li class="chapter-item expanded "><a href="../../doc/demo08_path/path.html"><strong aria-hidden="true">13.</strong> path</a></li><li class="chapter-item expanded affix "><li class="part-title">画布屏幕 &gt; demo09_canvas</li><li class="chapter-item expanded "><a href="../../doc/demo09_canvas/canvas.html"><strong aria-hidden="true">14.</strong> canvas</a></li><li class="chapter-item expanded affix "><li class="part-title">动画 &gt; demo10_animation</li><li class="chapter-item expanded "><a href="../../doc/demo10_animation/animation.html"><strong aria-hidden="true">15.</strong> animation</a></li><li class="chapter-item expanded affix "><li class="part-title">粒子光 &gt; demo11_particle_light</li><li class="chapter-item expanded "><a href="../../doc/demo11_particle_light/particle.html"><strong aria-hidden="true">16.</strong> particle</a></li><li class="chapter-item expanded affix "><li class="part-title">图形用户界面 &gt; demo12_gui</li><li class="chapter-item expanded "><a href="../../doc/demo12_gui/gui.html"><strong aria-hidden="true">17.</strong> gui</a></li><li class="chapter-item expanded affix "><li class="part-title">摄像机视角 &gt; demo13_camera</li><li class="chapter-item expanded "><a href="../../doc/demo13_camera/camera.html"><strong aria-hidden="true">18.</strong> camera</a></li><li class="chapter-item expanded affix "><li class="part-title">文件操作 &gt; demo14_file</li><li class="chapter-item expanded "><a href="../../doc/demo14_file/file.html"><strong aria-hidden="true">19.</strong> file</a></li><li class="chapter-item expanded affix "><li class="part-title">音频 &gt; demo15_audio</li><li class="chapter-item expanded "><a href="../../doc/demo15_audio/audio.html"><strong aria-hidden="true">20.</strong> audio</a></li><li class="chapter-item expanded affix "><li class="part-title">http协议 demo16_http</li><li class="chapter-item expanded "><a href="../../doc/demo16_http/http.html"><strong aria-hidden="true">21.</strong> http</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../doc/design-pattern.html">设计模式</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="1-场景树"><a class="header" href="#1-场景树">1. 场景树</a></h1>
+<ul>
+<li>Nodes（节点）是在Godot中创建游戏的基本构建块。当一组节点被添加到树中时，它被称为sence（场景），树被称为sence tree（场景树）</li>
+</ul>
+<pre><code>节点是可以表示各种专用游戏功能的对象。给定类型的节点可以显示图形，播放动画或表示对象的3D模型。
+该节点还包含一组属性，允许你自定义其行为。
+你添加到项目中的节点取决于你需要的功能。
+它是一个模块化系统，旨在为你提供构建游戏对象的灵活性。
+
+在项目中，你添加的节点将组织为树结构。在树中，节点被添加为其他节点的子节点。
+特定节点可以具有任意数量的子节点，但只能有一个父节点。
+</code></pre>
+<p><img src="image/scene-tree.png" alt="Image text" /></p>
+<h1 id="2-帧率"><a class="header" href="#2-帧率">2. 帧率</a></h1>
+<ul>
+<li>帧率 Framerate ，指画面每秒更新多少次 (FPS, Frames Per Second)</li>
+</ul>
+<pre><code>比如，
+  FPS = 50 , 即每 20ms 秒更新一次
+  FPS = 60,  约 16.7ms 秒更新一次
+
+通过代码可以设置，要求 godot 引擎尽量以此帧率运行 ，但实际帧率还是会有偏差
+Engine.target_fps = 120
+</code></pre>
+<p><img src="image/%E5%9C%BA%E6%99%AF%E5%BE%AA%E7%8E%AF.png" alt="Image text" />
+<img src="image/%E5%9C%BA%E6%99%AF%E5%B8%A7.png" alt="Image text" /></p>
+<ul>
+<li>delta time上一帧的间隔</li>
+</ul>
+<pre><code>匀速移动的优化：
+ var step = 0.8f * deltaTime;
+其中，
+   0.8f  表示每秒位移 0.8 单位
+</code></pre>
+<p><img src="image/delta.png" alt="Image text" />
+<img src="image/delta-1.png" alt="Image text" /></p>
+<h1 id="3-节点的生命周期"><a class="header" href="#3-节点的生命周期">3. 节点的生命周期</a></h1>
+<ul>
+<li>在Godot中，一个游戏的启动大致流程如下：</li>
+</ul>
+<pre><code>Godot的main启动一个进程，加载所需的驱动设备（如渲染设备：GL/GLES/Vulkan等）、音频设备，输入控制器设备等等；
+
+然后进入主循环，加载一个自动创建的对象——SceneTree（场景管理系统对象，它用户管理场景图），
+这个对象包含一个RootViewPort节点（它是一个Node），该节点包含一个默认的ViewPort（以便提供默认渲染的输出视口）。
+
+当用户用Godot编辑器创建一个关卡（或场景文件），并设置默认的启动的场景文件，Godot将该场景文件的根节点附加到RootViewPort节点上，
+当节点进入场景树（SceneTree），变为活动状态。
+按场景树顺序依次回调各个子节点的_init()，_ready()等声明函数。
+</code></pre>
+<p><img src="image/godot_process.jpg" alt="Image text" />
+<img src="image/godot_node.jpg" alt="Image text" />
+<img src="image/godot_lifecycle.jpg" alt="Image text" /></p>
+<h1 id="4-节点的获取方式"><a class="header" href="#4-节点的获取方式">4. 节点的获取方式</a></h1>
+<pre><code># 获取当前节点
+var currentNode1 = $&quot;.&quot;
+var currentNode2 = self
+
+# 获取父节点
+var parentNode1 = get_parent()
+var parentNode2 = $&quot;../&quot;
+
+# 获取子节点
+var subNode1 = $SubNode2
+var subNode2 = $&quot;SubNode2&quot;
+var subNode3 = get_node(&quot;SubNode2&quot;)
+
+# 根节点查找法，会返回节点树从上到下找到的第一个节点
+var subNode4 = get_tree().root.find_node(&quot;SubNode2&quot;, true, false)
+</code></pre>
+<h1 id="5-process和physics_process"><a class="header" href="#5-process和physics_process">5. process和physics_process</a></h1>
+<ul>
+<li>平时我们看到的动画，实际上是由很多静止的画面连续切换组成的</li>
+<li>其中每个静止的画面，我们都称为一帧，比如60帧的动画，就是一秒播放60个静止的画面，组成的动画</li>
+<li>godot 的 _process 相当于 unity 的 Update</li>
+</ul>
+<pre><code>内部对代码就会在每一帧之前被执行，也就是引擎每渲染一幅的画面之前，都会执行它里面的代码
+</code></pre>
+<ul>
+<li>godot 的 _physics_process 相当于 unity 的 FixedUpdate</li>
+</ul>
+<pre><code>内部的代码会在每个物理帧之前被执行，
+因为godot的物理模拟是单独进行的，每次进行物理模拟的时候，如计算一个刚体小球的运动轨迹，每进行一次计算，我们就称为是一进行了一个物理帧，
+而每次进行物理模拟之前，都会执行_physics_process中的代码
+</code></pre>
+<p><img src="image/process.png" alt="Image text" />
+<img src="image/process-1.png" alt="Image text" />
+<img src="image/physics.png" alt="Image text" />
+<img src="image/physics-1.png" alt="Image text" /></p>
+<h1 id="6-parent和owner"><a class="header" href="#6-parent和owner">6. Parent和Owner</a></h1>
+<ul>
+<li>
+<p>Parent</p>
+<ul>
+<li>一个节点的Parent就是场景树上它的父级</li>
+</ul>
+</li>
+<li>
+<p>Owner</p>
+<ul>
+<li>如果不修改默认Owner的话，可以把它视为节点所在场景的顶部节点，如果该节点本身就是顶部节点那么它的Owner为null</li>
+</ul>
+</li>
+<li>
+<p>静态场景结构中默认的Owner</p>
+</li>
+</ul>
+<p><img src="image/owner01.png" alt="Image text" /></p>
+<pre><code>extends Node
+
+class_name TestNode
+
+func _ready():
+	var parent_name = &quot;NULL&quot;
+	var owner_name = &quot;NULL&quot;
+	if get_parent() != null:
+		parent_name = get_parent().name
+	if owner != null:
+		owner_name = owner.name
+	print(name + &quot;'s parent is &lt;&quot; + parent_name + &quot;&gt; and it's owner is &lt;&quot; + owner_name + &quot;&gt;&quot; )
+	
+</code></pre>
+<pre><code>node_3's parent is &lt;node_2&gt; and it's owner is &lt;node_0&gt;
+node_2's parent is &lt;node_1&gt; and it's owner is &lt;node_0&gt;
+node_1's parent is &lt;node_0&gt; and it's owner is &lt;node_0&gt;
+node_0's parent is &lt;root&gt; and it's owner is &lt;NULL&gt;
+</code></pre>
+<ul>
+<li>动态创建的节点的Owner是null</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../doc/demo02_base/base2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../doc/demo04_signal/signal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../doc/demo02_base/base2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../doc/demo04_signal/signal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
