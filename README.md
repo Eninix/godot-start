@@ -7,3 +7,8 @@
 
 
 - godot start学习交流qq群，710511812
+
+-----
+
+在线书籍地址:  
+[https://eninix.github.io/godot-start/book/index.html](https://eninix.github.io/godot-start/book/index.html)
