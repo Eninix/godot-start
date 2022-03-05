@@ -3,4 +3,7 @@ authors = []
 language = "en"
 multilingual = true
 src = "."
-title = "Book"
+title = "GodotBook"
+
+[output.html]
+git-repository-url = "https://github.com/Eninix/godot-start"
