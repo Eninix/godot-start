@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 102.421, 70.9156 )
+texture = ExtResource( 1 )
+
+[node name="ButtonParent" type="Button" parent="."]
+margin_left = 323.666
+margin_top = 121.838
+margin_right = 376.666
+margin_bottom = 141.838
+text = "Parent"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ButtonParent"]
+margin_right = 44.0
+margin_bottom = 20.0
+text = "Child"
+
+[node name="Control" type="Control" parent="."]
+margin_left = 55.1478
+margin_top = 233.954
+margin_right = 216.148
+margin_bottom = 344.954
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_right = 105.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 75.7402, 10.9574 )
+text = "aaaaaaaaaaaaaav"
+__meta__ = {
+"_edit_use_anchors_": false
+}

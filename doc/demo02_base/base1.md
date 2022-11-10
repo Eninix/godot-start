@@ -202,7 +202,7 @@ else:
 ```
 if (condition1):
     当条件 1 为 true 时执行的代码
-else if (condition2):
+elif (condition2):
     当条件 2 为 true 时执行的代码
 else:
   当条件 1 和 条件 2 都不为 true 时执行的代码

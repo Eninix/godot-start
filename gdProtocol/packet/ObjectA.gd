@@ -1,5 +1,6 @@
 # @author jaysunxiao
 # @version 3.0
+
 var a # int
 var m # java.util.Map<java.lang.Integer, java.lang.String>
 var objectB # com.zfoo.protocol.packet.ObjectB
@@ -17,7 +18,7 @@ static func write(buffer, packet):
 static func read(buffer):
 	if (!buffer.readBool()):
 		return null
-	var packet = buffer.newInstance(102)
+	var packet = buffer.newInstance(PROTOCOL_ID)
 	var result0 = buffer.readInt()
 	packet.a = result0
 	var map1 = buffer.readIntStringMap()

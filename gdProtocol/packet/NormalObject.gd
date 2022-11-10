@@ -1,5 +1,6 @@
 # @author jaysunxiao
 # @version 3.0
+
 var a # byte
 var aaa # byte[]
 var b # short
@@ -47,7 +48,7 @@ static func write(buffer, packet):
 static func read(buffer):
 	if (!buffer.readBool()):
 		return null
-	var packet = buffer.newInstance(101)
+	var packet = buffer.newInstance(PROTOCOL_ID)
 	var result0 = buffer.readByte()
 	packet.a = result0
 	var array1 = buffer.readByteArray()

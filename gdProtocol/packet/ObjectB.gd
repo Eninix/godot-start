@@ -1,5 +1,6 @@
 # @author jaysunxiao
 # @version 3.0
+
 var flag # boolean
 
 const PROTOCOL_ID = 103
@@ -13,7 +14,7 @@ static func write(buffer, packet):
 static func read(buffer):
 	if (!buffer.readBool()):
 		return null
-	var packet = buffer.newInstance(103)
+	var packet = buffer.newInstance(PROTOCOL_ID)
 	var result0 = buffer.readBool() 
 	packet.flag = result0
 	return packet

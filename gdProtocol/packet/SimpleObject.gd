@@ -1,5 +1,6 @@
 # @author jaysunxiao
 # @version 3.0
+
 var c # int
 var g # boolean
 
@@ -15,7 +16,7 @@ static func write(buffer, packet):
 static func read(buffer):
 	if (!buffer.readBool()):
 		return null
-	var packet = buffer.newInstance(104)
+	var packet = buffer.newInstance(PROTOCOL_ID)
 	var result0 = buffer.readInt()
 	packet.c = result0
 	var result1 = buffer.readBool() 

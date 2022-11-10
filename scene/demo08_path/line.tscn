@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://script/demo06_move/move_hero.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://script/demo08_path/my_line.gd" type="Script" id=3]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.0545454 ), 0.0, 0.0, 0, 0, Vector2( 0.155556, 0.3 ), 0.0, 0.0, 0, 0, Vector2( 0.361111, 0.572727 ), 0.0, 0.0, 0, 0, Vector2( 0.733333, 0.781818 ), 0.0, 0.0, 0, 0, Vector2( 0.916667, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.395973, 1 )
+colors = PoolColorArray( 0.133195, 0.308942, 0.362743, 1, 0.226219, 0.464389, 0.839305, 1, 0.0228882, 0.261307, 0.976563, 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 64.0
+width_curve = SubResource( 1 )
+default_color = Color( 0.4, 0.501961, 1, 1 )
+gradient = SubResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 159.521, 163.844 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )

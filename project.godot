@@ -24,6 +24,11 @@ config/name="godot-start"
 run/main_scene="res://scene/demo01_hello/hello_world.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [input]
 
 move_left={

@@ -23,6 +23,6 @@ scale = Vector2( 0.33008, 0.33008 )
 texture = ExtResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 537.522, 221.192 )
+position = Vector2( 497.817, 209.206 )
 scale = Vector2( 3.52112, 0.96036 )
 texture = ExtResource( 1 )

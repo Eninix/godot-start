@@ -75,3 +75,7 @@
 ---
 
 [设计模式](doc/design-pattern.md)
+[编辑器使用](doc/editor-setup.md)
+[其他编译器](compile/godot-compile.md)
+[脚本语言选择](doc/language-select.md)
+[其他教程推荐](doc/tutorial-project.md)
